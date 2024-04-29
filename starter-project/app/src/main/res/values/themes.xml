@@ -1,0 +1,12 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Asclepius" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/teal</item>
+        <item name="colorAccent">@color/grey</item>
+        <item name="android:windowBackground">@color/snow</item>
+        <item name="android:textColorHint">@color/snow</item>
+    </style>
+
+    <style name="Theme.Asclepius" parent="Base.Theme.Asclepius" />
+</resources>
