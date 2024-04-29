@@ -8,6 +8,7 @@ import androidx.core.net.toUri
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.asclepius.databinding.ActivityResultBinding
+import com.dicoding.asclepius.local.entity.DataEntity
 
 
 class ResultActivity : AppCompatActivity() {
@@ -39,6 +40,15 @@ class ResultActivity : AppCompatActivity() {
         resultViewModel.getHealthNews()
         resultViewModel.listItem.observe(this) { article ->
             listAdapter.submitList(article)
+        }
+
+        binding.saveButton.setOnClickListener {
+            val data = DataEntity(
+                label = label,
+                confidence = confidence.toInt(),
+                imageUri = imageUri
+            )
+            resultViewModel.addData(data)
         }
 
     }
